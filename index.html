@@ -1,0 +1,231 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>MERC TOOLS </title>
+
+    <!-- meta -->
+    <meta name="description" content="Our first page">
+    <meta name="keywords" content="html tutorial template">
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="./css/css.css">
+
+    <!--sidebar css -->
+    <link rel="stylesheet" type="text/css" href="./css/sidebar.css">
+
+
+</head>
+
+<body class="body">
+
+    <!-- Sidebar -->
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <img src="http://cdn.onlinewebfonts.com/svg/img_456510.png" alt="KODI">
+                </li>
+                <li> <a href="#" onclick="load('0')">Home</a>
+
+                </li>
+
+                <li><a href="#" onclick="load('1')">RANDOM MR</a></li>
+                <li><a href="#" onclick="load('2')">MERC git steps</a></li>
+                <li><a href="#" onclick="load('3')">My task checklist</a></li>
+
+                <!-- <li><a href="#" onclick="load('4')">COPY FROM</a></li> -->
+
+
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+    </div>
+
+    <!-- /#wrapper -->
+
+    <div id="page-content-wrapper"> <a href="#" class="btn btn-default" id="menu-toggle"><span
+                class="glyphicon glyphicon-th-list"></span></a>
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+
+                    <!-- home content -->
+                    <div id="home">
+                        <h1>Bbc tools</h1>
+                    </div>
+                    <!-- end home content -->
+
+                    <!-- game01 -->
+                    <div id="game01" class="center" style="display: none;">
+                        <h1>RANDOM MR</h1>
+
+                        <button class="button1" type="button" onClick="showRandomFruit()">Click Me!</button>
+                        <h1 id="game01Board" visible=false></h1>
+                    </div>
+                    <!-- end game01 -->
+
+
+                    <!-- game02 -->
+                    <div id="game02" class="center" style="display: none;">
+                        <h1>GIT MERC steps</h1>
+
+                        <table>
+                            <tr>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="gitLabel" for="Student">On 'development mercurius' teams team:</label>
+                                </td>
+                                <td>
+                                    <input class="centerInput" type="text" value="merge MERC-" id="mergeText">
+                                    <button onclick="gitStepsCopyText('mergeText')">Copy</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="gitLabel" for="Student">On terminal</label>
+                                </td>
+                                <td>
+                                    <input class="centerInput" type="text" value="git fetch -a -p" id="fetchText">
+                                    <button onclick="gitStepsCopyText('fetchText')">Copy</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="Student"></label>
+                                </td>
+                                <td>
+                                    <input class="centerInput" type="text" value="git rebase origin/master"
+                                        id="rebaseText" />
+                                    <button onclick="gitStepsCopyText('rebaseText')">Copy</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="Student"></label>
+                                </td>
+                                <td>
+                                    <input class="centerInput" type="text" value="git push -f" id="forcePushText">
+                                    <button onclick="gitStepsCopyText('forcePushText')">Copy</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="gitLabel" for="Student">On GITLAB web interface</label>
+                                </td>
+                                <td>
+                                    <label class="centerInput" for="Student">PRESS MERGE BUTTON </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="gitLabel" for="Student">On development mercurius team</label>
+                                </td>
+                                <td><input class="centerInput" type="text" value="done" id="doneText">
+                                    <button onclick="gitStepsCopyText('doneText')">Copy</button>
+                                </td>
+                            </tr>
+                            <td>
+                                <label class="gitLabel" for="Student">On JIRA</label>
+                            </td>
+                            <td>
+                                <label class="centerInput" for="Student">PRESS MERGE BUTTON </label>
+                            </td>
+
+                        </table>
+
+
+                    </div>
+                    <!-- end game02 -->
+
+
+                    <!-- game03 -->
+                    <div id="game03" class="center" style="display: none;">
+
+                        <section>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-7 mx-auto">
+                                        <div class="card shadow border-0 mb-5">
+                                            <div class="card-body p-5">
+                                                <h2 class="h4 mb-1">TASK STEPS</h2>
+                                                <label>Task link: </label>
+                                                <!-- <p class="small text-muted font-italic mb-4">Lorem ipsum dolor sit amet,
+                                                    consectetur adipisicing elit.</p> -->
+                                                <ul class="list-group">
+                                                    <li class="list-group-item rounded-0">
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input class="custom-control-input" id="customCheck1"
+                                                                type="checkbox">
+                                                            <input class="centerInput" type="text" value="" for="customCheck1">
+                                                        </div>
+                                                    </li>
+                                                    <li class="list-group-item">
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input class="custom-control-input" id="customCheck2"
+                                                                type="checkbox">
+                                                                <input class="centerInput" type="text" value=""  for="customCheck2">
+                                                        </div>
+                                                    </li>
+                                                    <li class="list-group-item">
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input class="custom-control-input" id="customCheck3"
+                                                                type="checkbox">
+                                                                <input class="centerInput" type="text" value=""  for="customCheck3">
+                                                        </div>
+                                                    </li>
+                                                    <li class="list-group-item">
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input class="custom-control-input" id="customCheck4"
+                                                                type="checkbox">
+                                                                <input class="centerInput" type="text" value=""  for="customCheck4">
+                                                        </div>
+                                                    </li>
+                                                    <li class="list-group-item rounded-0">
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input class="custom-control-input" id="customCheck5"
+                                                                type="checkbox">
+                                                                <label class="cursor-pointer font-italic d-block custom-control-label" for="customCheck5">Latte</label>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <!-- end game03 -->
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+        <script type="text/javascript" src="./js/sidebar.js"></script>
+        <script type="text/javascript" src="./js/games/game01.js"></script>
+        <script type="text/javascript" src="./js/games/game02.js"></script>
+        <script type="text/javascript" src="./js/tabs.js"></script>
+
+</body>
+
+
+</html>
