@@ -13,9 +13,6 @@ function transformToCheckList() {
         className.includes('rounded') ? null : transform(element);
     });
 
-
-    // get all li´s ...
-    //     rounded-0 class ? nothing : transform()
 }
 
 function transform(element) {
@@ -35,7 +32,6 @@ function transform(element) {
 
     $(inputElementToBeTransformed).replaceWith(text);
 
-    // add list item class
     $(element).attr("class", "list-group-item rounded-" + id);
     
 }
@@ -84,17 +80,9 @@ function changeTaskLink(element) {
 
     var nodeText = element.value;
 
-    // var nodeToReplace = "<input class='taskLink' type='text' value=" + nodeText + "><button type='button' onclick='copyTestLink()'>Copy</button>";
     var mercName = getMercName(nodeText); 
 
-    https://jira.int.cipal.be/browse/MERC-13317
-
     var nodeToReplace = "<a href='"+ nodeText + "' target='_blank' class='text-muted font-italic mb-4 taskLinkLabel taskLink' type='text' >" +  mercName + "</a> <button class='btn btn-info' type='button' onclick='copyTestLink()'>Copy</button>";
-
-    // <p class="small text-muted font-italic mb-4 taskLinkLabel">Lorem ipsum dolor sit amet,
-    // consectetur adipisicing elit.</p>
-
-    // var nodeToReplace = "<a class='taskLink'>" + nodeText + "</a>"
 
     $(element).attr('value', element.value);
 
