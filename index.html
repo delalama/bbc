@@ -40,7 +40,7 @@
 
                 <li><a href="#" onclick="load('1')">RANDOM MR</a></li>
                 <li><a href="#" onclick="load('2')">MERC git steps</a></li>
-                <li><a href="#" onclick="load('3')">My task checklist</a></li>
+                <li><a class="dev" href="#" onclick="load('3')">My task checklist</a></li>
 
                 <!-- <li><a href="#" onclick="load('4')">COPY FROM</a></li> -->
 
@@ -153,51 +153,42 @@
 
                     <!-- game03 -->
                     <div id="game03" class="center" style="display: none;">
-
+                        <table class="table">
+                            <tr>
+                                <button type="button" class="btn btn-primary" onclick="transformToCheckList()">To Check
+                                    List</button>
+                            </tr>
+                            <tr>
+   
+                            </tr>
+                        </table>
                         <section>
                             <div class="container">
                                 <div class="row">
-                                    <div class="col-lg-7 mx-auto">
-                                        <div class="card shadow border-0 mb-5">
-                                            <div class="card-body p-5">
-                                                <h2 class="h4 mb-1">TASK STEPS</h2>
-                                                <label>Task link: </label>
-                                                <!-- <p class="small text-muted font-italic mb-4">Lorem ipsum dolor sit amet,
-                                                    consectetur adipisicing elit.</p> -->
-                                                <ul class="list-group">
-                                                    <li class="list-group-item rounded-0">
+                                    <div class="col-lg-12 mx-auto">
+                                        <div class="card shadow ">
+                                            <div class="card-body p-10">
+                                                <div class="">
+                                                    <label class="taskLinkTitle">Task link: </label>
+                                                    <br>
+                                                    <input class="taskLink" type="text" value="" for="taskLink"
+                                                        onchange="changeTaskLink(this)">
+                                                </div>
+
+                                                <br>
+
+                                                <a class="h4 mb-1">TASK STEPS</a>
+
+                                                <button type="button" class="btn btn-primary" onclick="addCheck()"
+                                                style="margin-left: 100px;">+</button>
+
+                                                <ul class="task-list-group ">
+                                                    <li class="list-group-item task-0">
                                                         <div class="custom-control custom-checkbox">
-                                                            <input class="custom-control-input" id="customCheck1"
+                                                            <input class="custom-control-input" id="customCheck0"
                                                                 type="checkbox">
-                                                            <input class="centerInput" type="text" value="" for="customCheck1">
-                                                        </div>
-                                                    </li>
-                                                    <li class="list-group-item">
-                                                        <div class="custom-control custom-checkbox">
-                                                            <input class="custom-control-input" id="customCheck2"
-                                                                type="checkbox">
-                                                                <input class="centerInput" type="text" value=""  for="customCheck2">
-                                                        </div>
-                                                    </li>
-                                                    <li class="list-group-item">
-                                                        <div class="custom-control custom-checkbox">
-                                                            <input class="custom-control-input" id="customCheck3"
-                                                                type="checkbox">
-                                                                <input class="centerInput" type="text" value=""  for="customCheck3">
-                                                        </div>
-                                                    </li>
-                                                    <li class="list-group-item">
-                                                        <div class="custom-control custom-checkbox">
-                                                            <input class="custom-control-input" id="customCheck4"
-                                                                type="checkbox">
-                                                                <input class="centerInput" type="text" value=""  for="customCheck4">
-                                                        </div>
-                                                    </li>
-                                                    <li class="list-group-item rounded-0">
-                                                        <div class="custom-control custom-checkbox">
-                                                            <input class="custom-control-input" id="customCheck5"
-                                                                type="checkbox">
-                                                                <label class="cursor-pointer font-italic d-block custom-control-label" for="customCheck5">Latte</label>
+                                                            <input class="centerInput" type="text" value=""
+                                                                for="customCheck0" onchange="changeInputValue(this)">
                                                         </div>
                                                     </li>
                                                 </ul>
@@ -217,13 +208,15 @@
 
 
 
-
-
-
         <script type="text/javascript" src="./js/sidebar.js"></script>
         <script type="text/javascript" src="./js/games/game01.js"></script>
         <script type="text/javascript" src="./js/games/game02.js"></script>
+        <script type="text/javascript" src="./js/games/game03.js"></script>
         <script type="text/javascript" src="./js/tabs.js"></script>
+
+        <script>
+            $('.dev').click();
+        </script>
 
 </body>
 

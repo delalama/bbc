@@ -12,6 +12,11 @@
     margin-left: 400px;
 }
 
+.centerDiv {
+    text-align: center;
+    width: 50%;
+}
+
 .button1 {
     color: red;
 }
