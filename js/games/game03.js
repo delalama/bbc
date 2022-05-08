@@ -72,6 +72,12 @@ function changeInputValue(element) {
     $(element).attr('value', element.value);
 }
 
+function getMercName(text) {
+    var index = text.indexOf("MERC-");
+
+    return text.substring(index);
+}
+
 function changeTaskLink(element) {
 
     $('.taskLinkTitle').remove();
@@ -79,8 +85,11 @@ function changeTaskLink(element) {
     var nodeText = element.value;
 
     // var nodeToReplace = "<input class='taskLink' type='text' value=" + nodeText + "><button type='button' onclick='copyTestLink()'>Copy</button>";
+    var mercName = getMercName(nodeText); 
 
-    var nodeToReplace = "<a href='"+ nodeText + "' target='_blank' class='small text-muted font-italic mb-4 taskLinkLabel taskLink' type='text' >" +  nodeText + "</a>";
+    https://jira.int.cipal.be/browse/MERC-13317
+
+    var nodeToReplace = "<a href='"+ nodeText + "' target='_blank' class='text-muted font-italic mb-4 taskLinkLabel taskLink' type='text' >" +  mercName + "</a> <button class='btn btn-info' type='button' onclick='copyTestLink()'>Copy</button>";
 
     // <p class="small text-muted font-italic mb-4 taskLinkLabel">Lorem ipsum dolor sit amet,
     // consectetur adipisicing elit.</p>
@@ -100,15 +109,3 @@ function copyTestLink(id) {
 
     navigator.clipboard.writeText(copyText);
 }
-
-function copyTestLink() {
-
-}
-
-// <li class="list-group-item rounded-0">
-// <div class="custom-control custom-checkbox">
-//     <input class="custom-control-input" id="customCheck5"
-//         type="checkbox">
-//         <label class="cursor-pointer font-italic d-block custom-control-label" for="customCheck5">Latte cursor-pointer font-italic d-block custom-control-l</label>
-// </div>
-// </li>
