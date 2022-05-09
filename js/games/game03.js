@@ -82,7 +82,7 @@ function changeTaskLink(element) {
 
     var mercName = getMercName(nodeText); 
 
-    var nodeToReplace = "<a href='"+ nodeText + "' target='_blank' class='text-muted font-italic mb-4 taskLinkLabel taskLink' type='text' >" +  mercName + "</a> <button class='btn btn-info' type='button' onclick='copyTestLink()'>Copy</button>";
+    var nodeToReplace = "<a href='"+ nodeText + "' target='_blank' class='text-muted font-italic mb-4 taskLinkLabel taskLink' type='text' >" +  mercName + "</a> <button class='btn btn-info buttonMarginLeft' type='button' onclick='copyTestLink()'>Copy</button>";
 
     $(element).attr('value', element.value);
 

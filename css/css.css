@@ -48,3 +48,7 @@
 .centerInput {
     text-align: center;
 }
+
+.buttonMarginLeft {
+    margin-left: 50%;
+}
