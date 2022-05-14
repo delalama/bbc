@@ -4,21 +4,19 @@
 }
 
 .center {
-    text-align: center;
-    margin: 20px auto 20px 200px;
     width: 50%;
+    margin: 0 auto;
+}
 
-    padding: 20px;
-    margin-left: 400px;
+.centerGitSteps {
+    width: 70%;
+    margin: 0 auto;
+    margin-left: 25% ;
 }
 
 .centerDiv {
     text-align: center;
     width: 50%;
-}
-
-.button1 {
-    color: red;
 }
 
 /* game01 */
@@ -52,3 +50,29 @@
 .buttonMarginLeft {
     margin-left: 50%;
 }
+
+
+.gitStepsTr{
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+}
+
+.centered{
+    align-content: center;
+}
+
+
+.rightDivcenter {
+       margin-left: 5%;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       top: 50px;
+}
+
+
+#gitStepsTable td {
+       text-align: left;
+       padding-right: 70px;
+}
+
