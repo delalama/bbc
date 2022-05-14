@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>MERC TOOLS </title>
+    <title>BBC TOOLS </title>
 
     <!-- meta -->
     <meta name="description" content="Our first page">
@@ -40,9 +40,11 @@
 
                 <li><a href="#" onclick="load('1')">RANDOM MR</a></li>
                 <li><a href="#" onclick="load('2')">MERC git steps</a></li>
-                <li><a class="dev" href="#" onclick="load('3')">My task checklist</a></li>
+                <li><a class="#" href="#" onclick="load('3')">My task checklist</a></li>
+                <li><a class="dev" href="#" onclick="load('4')">Regex</a></li>
 
-                <!-- <li><a href="#" onclick="load('4')">COPY FROM</a></li> -->
+
+                <!-- <li><a href="#" onclick="load('5')">COPY FROM</a></li> -->
 
 
                 </li>
@@ -63,7 +65,7 @@
 
                     <!-- home content -->
                     <div id="home">
-                        <h1>Bbc tools</h1>
+                        <h1>Bbc lazy tools</h1>
                     </div>
                     <!-- end home content -->
 
@@ -159,7 +161,7 @@
                                     List</button>
                             </tr>
                             <tr>
-   
+
                             </tr>
                         </table>
                         <section>
@@ -180,7 +182,7 @@
                                                 <a class="h4 mb-1">TASK STEPS</a>
 
                                                 <button type="button" class="btn btn-primary" onclick="addCheck()"
-                                                style="margin-left: 100px;">+</button>
+                                                    style="margin-left: 100px;">+</button>
 
                                                 <ul class="task-list-group ">
                                                     <li class="list-group-item task-0">
@@ -189,6 +191,8 @@
                                                                 type="checkbox">
                                                             <input class="centerInput" type="text" value=""
                                                                 for="customCheck0" onchange="changeInputValue(this)">
+                                                            <button onclick="gitStepsCopyText('jspRegex')">Copy</button>
+
                                                         </div>
                                                     </li>
                                                 </ul>
@@ -198,25 +202,61 @@
                                 </div>
                             </div>
                         </section>
-                        <!-- end game03 -->
-
-
                     </div>
+
+                    <!-- end game03 -->
+
+                    <!-- game04 -->
+
+                    <div id="game04" class="center" style="display: none;">
+                        <h1>regex</h1>
+                        <section>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-12 mx-auto">
+                                        <div class="card shadow ">
+                                            <div class="card-body p-10">
+                                                <br>
+
+                                                <ul class="task-list-group ">
+                                                    <li class="list-group-item task-0">
+                                                        <div class="custom-control custom-checkbox">
+                                                            <label>JSP SEARCH</label>
+                                                            <input class="custom-control-input" id="jspRegex"
+                                                                type="checkbox">
+                                                            <input class="centerInput" type="text" value=""
+                                                                for="jspRegex" onchange="transformToJspSearchRegex(this,'jspRegex')">                       
+                                                            <label class="jspRegex" style="display:none">Copied</label>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <!-- end game04 -->
+
+
                 </div>
             </div>
         </div>
+    </div>
 
 
 
-        <script type="text/javascript" src="./js/sidebar.js"></script>
-        <script type="text/javascript" src="./js/games/game01.js"></script>
-        <script type="text/javascript" src="./js/games/game02.js"></script>
-        <script type="text/javascript" src="./js/games/game03.js"></script>
-        <script type="text/javascript" src="./js/tabs.js"></script>
+    <script type="text/javascript" src="./js/sidebar.js"></script>
+    <script type="text/javascript" src="./js/games/game01.js"></script>
+    <script type="text/javascript" src="./js/games/game02.js"></script>
+    <script type="text/javascript" src="./js/games/game03.js"></script>
+    <script type="text/javascript" src="./js/games/game04.js"></script>
+    <script type="text/javascript" src="./js/tabs.js"></script>
 
-        <!-- <script>
-            $('.dev').click();
-        </script> -->
+    <script>
+        $('.dev').click();
+    </script>
 
 </body>
 
