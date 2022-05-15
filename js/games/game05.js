@@ -125,7 +125,7 @@ var allShortcuts = [
     "EDITING_Delete to word end: Ctrl + Delete",
     "EDITING_Delete to word start: Ctrl + Backspace",
     "EDITING_Expand / collapse code block: Ctrl + NumPad+/-",
-    "EDITING_Expand al Ctrl + Shift + NumPad+",
+    "EDITING_Expand all: Ctrl + Shift + NumPad+",
     "EDITING_Collapse all: Ctrl + Shift + NumPad",
     "EDITING_Close active editor tab: Ctrl + F4",
     "REFACTORING_Copy: F5",
