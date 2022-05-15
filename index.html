@@ -23,6 +23,9 @@
     <!--bbc title css -->
     <link rel="stylesheet" type="text/css" href="./css/bbcTitle.css">
 
+    <!--animation css -->
+    <link rel="stylesheet" type="text/css" href="./css/animation.css">
+
 
 </head>
 
@@ -59,10 +62,14 @@
 
                     </li>
                 </ul>
+
+
             </div>
             <!-- /#sidebar-wrapper -->
 
+
         </div>
+
 
         <!-- /#wrapper -->
 
@@ -266,12 +273,33 @@
             </div>
             <!-- end game04 -->
         </div>
-    </div>
+        
 
+        <!-- animation -->
+        <!-- <div id="container" style="display:none"> -->
+        <div id="container" >
+            <span id="text1"></span>
+            <span id="text2"></span>
+        </div>
+
+        <svg id="filters">
+
+            <defs>
+                <filter id="threshold">
+                    <feColorMatrix in="SourceGraphic" type="matrix" values="1 0 0 0 0
+                      0 1 0 0 0
+                      0 0 1 0 0
+                      0 0 0 255 -140" />
+                </filter>
+            </defs>
+        </svg>
+
+    </div>
 
 
     <script type="text/javascript" src="./js/sidebar.js"></script>
     <script type="text/javascript" src="./js/tabs.js"></script>
+    <script type="text/javascript" src="./js/animation.js"></script>
 
     <script type="text/javascript" src="./js/games/game01.js"></script>
     <script type="text/javascript" src="./js/games/game02.js"></script>
