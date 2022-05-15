@@ -20,12 +20,13 @@
 
     <!--sidebar css -->
     <link rel="stylesheet" type="text/css" href="./css/sidebar.css">
+    <!--bbc title css -->
+    <link rel="stylesheet" type="text/css" href="./css/bbcTitle.css">
 
 
 </head>
 
 <body class="body">
-
 
     <div style="width: 100%; overflow: hidden;">
         <!-- Sidebar -->
@@ -33,14 +34,22 @@
             <!-- Sidebar -->
             <div id="sidebar-wrapper">
                 <ul class="sidebar-nav">
-                    <li><a href="#" style="font-size:2em">BBC DEV</a></li>
 
-                    <li> <a href="#" onclick="load('0')">Home</a>
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 text-center">
+                                <h3 class="animate-charcter"> BBC DEV   </h3>
+                            </div>
+                        </div>
+                    </div>
+                     
+                    <li> <a class="dev" href="#" onclick="load('0')">Home</a>
 
                     </li>
 
                     <li><a href="#" onclick="load('1')">RANDOM MR</a></li>
-                    <li><a class="dev" href="#" onclick="load('2')">MERC git steps</a></li>
+                    <li><a href="#" onclick="load('2')">MERC git steps</a></li>
                     <li><a href="#" onclick="load('3')">My task checklist</a></li>
                     <li><a href="#" onclick="load('4')">Regex</a></li>
 
@@ -57,12 +66,34 @@
 
         <!-- /#wrapper -->
 
-        <div id="page-content-wrapper" class="rightDivCenter" style="margin-left: 15%;width: 83%;"> <a href="#" class="btn btn-default"
-                id="menu-toggle"><span class="glyphicon glyphicon-th-list"></span></a>
+        <div id="page-content-wrapper" class="rightDivCenter shadowDiv" style="margin-left: 15%;width: 83%;"> <a
+                href="#" class="btn btn-default" id="menu-toggle"><span class="glyphicon glyphicon-th-list"></span></a>
 
             <!-- home content -->
             <div id="home">
-                <h1>Bbc lazy tools</h1>
+                <h1>MERC lazy tools</h1>
+                <table  class="table">
+                    <tr>
+                        <th>TOOL</th>
+                        <th>DESCRIPTION</th>
+                    </tr>
+                    <tr>
+                        <td>Random MR</td>
+                        <td>Random choose developer </td>
+                    </tr>
+                    <tr>
+                        <td>MERC git steps</td>
+                        <td>Git steps to push tasks</td>
+                    </tr>
+                    <tr>
+                        <td>My task checklist</td>
+                        <td>Create a task resume</td>
+                    </tr>
+                    <tr>
+                        <td>Regex</td>
+                        <td>What it says</td>
+                    </tr>
+                </table>
             </div>
             <!-- end home content -->
 
@@ -70,7 +101,8 @@
             <div id="game01" class="center" style="display: none;">
                 <h1>RANDOM MR</h1>
 
-                <button  type="button" class="btn btn-primary" type="button" onClick="showRandomFruit()">Click Me!</button>
+                <button type="button" class="btn btn-primary" type="button" onClick="showRandomFruit()">Click
+                    Me!</button>
                 <h1 id="game01Board" visible=false></h1>
             </div>
             <!-- end game01 -->
@@ -78,23 +110,17 @@
 
             <!-- game02 -->
             <div id="game02" class="centerGitSteps" style="display: none;">
-                <h1></h1>
+                <h1>GIT MERC steps</h1>
 
-                <table id="gitStepsTable">
+                <table id="gitStepsTable"  class="table">
                     <tr>
-                        <td>
-                            <label style="font-size:2em" class="gitLabel" for="Student">GIT MERC steps</label>
-                        </td>
-                        <td>
-                        </td>
-                    </tr>
-                     <tr>
                         <td class="gitStepsTr">
                             <label class="gitLabel" for="Student">Development mercurius team</label>
                         </td>
                         <td>
                             <input class="centerInput" type="text" value="merge MERC-" id="mergeText">
-                            <button type="button" class="btn btn-primary" onclick="gitStepsCopyText('mergeText')">Copy</button>
+                            <button type="button" class="btn btn-primary"
+                                onclick="gitStepsCopyText('mergeText')">Copy</button>
                         </td>
                     </tr>
                     <tr class="gitStepsTr">
@@ -103,7 +129,8 @@
                         </td>
                         <td>
                             <input class="centerInput" type="text" value="git fetch -a -p" id="fetchText">
-                            <button  type="button" class="btn btn-primary" onclick="gitStepsCopyText('fetchText')">Copy</button>
+                            <button type="button" class="btn btn-primary"
+                                onclick="gitStepsCopyText('fetchText')">Copy</button>
                         </td>
                     </tr>
                     <tr class="gitStepsTr">
@@ -112,7 +139,8 @@
                         </td>
                         <td>
                             <input class="centerInput" type="text" value="git rebase origin/master" id="rebaseText" />
-                            <button  type="button" class="btn btn-primary" onclick="gitStepsCopyText('rebaseText')">Copy</button>
+                            <button type="button" class="btn btn-primary"
+                                onclick="gitStepsCopyText('rebaseText')">Copy</button>
                         </td>
                     </tr>
                     <tr class="gitStepsTr">
@@ -121,7 +149,8 @@
                         </td>
                         <td>
                             <input class="centerInput" type="text" value="git push -f" id="forcePushText">
-                            <button  type="button" class="btn btn-primary" onclick="gitStepsCopyText('forcePushText')">Copy</button>
+                            <button type="button" class="btn btn-primary"
+                                onclick="gitStepsCopyText('forcePushText')">Copy</button>
                         </td>
                     </tr>
                     <tr class="gitStepsTr">
@@ -137,7 +166,8 @@
                             <label class="gitLabel" for="Student">Development mercurius team</label>
                         </td>
                         <td><input class="centerInput" type="text" value="done" id="doneText">
-                            <button  type="button" class="btn btn-primary" onclick="gitStepsCopyText('doneText')">Copy</button>
+                            <button type="button" class="btn btn-primary"
+                                onclick="gitStepsCopyText('doneText')">Copy</button>
                         </td>
                     </tr>
                     <td>
@@ -192,7 +222,6 @@
                                                         type="checkbox">
                                                     <input class="centerInput" type="text" value="" for="customCheck0"
                                                         onchange="changeInputValue(this)">
-                                                    <button  type="button" class="btn btn-primary" onclick="gitStepsCopyText('jspRegex')">Copy</button>
 
                                                 </div>
                                             </li>
@@ -249,9 +278,11 @@
     <script type="text/javascript" src="./js/games/game03.js"></script>
     <script type="text/javascript" src="./js/games/game04.js"></script>
 
+
     <!-- dev -->
     <script>
-        $('.dev').click();
+        // $('.dev').click();
+        $('#home').click();
     </script>
 
 </body>

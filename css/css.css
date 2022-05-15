@@ -21,13 +21,10 @@
 
 /* game01 */
 #game01Board {
-    margin-top: 150px !important;
     font-size: 8em;
 }
 
-/* game02 */
 #game02Board {
-    margin-top: 150px !important;
     font-size: 6em;
 }
 
@@ -67,12 +64,16 @@
        display: flex;
        align-items: center;
        justify-content: center;
-       top: 50px;
 }
 
 
 #gitStepsTable td {
        text-align: left;
        padding-right: 70px;
+}
+
+
+.shadowDiv {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
