@@ -55,6 +55,7 @@
                     <li><a href="#" onclick="load('2')">MERC git steps</a></li>
                     <li><a href="#" onclick="load('3')">My task checklist</a></li>
                     <li><a href="#" onclick="load('4')">Regex</a></li>
+                    <li><a href="#" onclick="load('5')">Intellij Shortcut</a></li>
 
 
                     <!-- <li><a href="#" onclick="load('5')">COPY FROM</a></li> -->
@@ -108,9 +109,11 @@
             <div id="game01" class="center" style="display: none;">
                 <h1>RANDOM MR</h1>
 
-                <button type="button" class="btn btn-primary" type="button" onClick="showRandomFruit()">Click
+                <button type="button" class="btn btn-primary" type="button" onClick="showRandomDeveloper()">Click
                     Me!</button>
-                <h1 id="game01Board" visible=false></h1>
+                <div class="game01Div">
+                    <h1 id="game01Board" visible=false></h1>
+                </div>
             </div>
             <!-- end game01 -->
 
@@ -272,12 +275,39 @@
                 </section>
             </div>
             <!-- end game04 -->
+
+            <!-- game05 -->
+            <div id="game05" class="center" style="display: none;">
+                <h1>Shortcut</h1>
+
+                <button type="button" class="btn btn-primary" type="button" onClick="showRandomShortcut()">Click
+                    Me!</button>
+
+                <table type="table" class="table shortcutTable">
+                    <tr>
+                        <td>Family</td>
+                        <td id="shortcutFamily" class="shortcutInfo"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Action</td>
+                        <td id="shortcutAction" class="shortcutInfo"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Shortcut</td>
+                        <td id="shortcutShortcut" class="shortcutInfo"></td>
+                    </tr>
+                </table>
+
+            </div>
+            <!-- end game04 -->
         </div>
-        
+
 
         <!-- animation -->
         <!-- <div id="container" style="display:none"> -->
-        <div id="container" >
+        <div id="container">
             <span id="text1"></span>
             <span id="text2"></span>
         </div>
@@ -305,6 +335,7 @@
     <script type="text/javascript" src="./js/games/game02.js"></script>
     <script type="text/javascript" src="./js/games/game03.js"></script>
     <script type="text/javascript" src="./js/games/game04.js"></script>
+    <script type="text/javascript" src="./js/games/game05.js"></script>
 
 
     <!-- dev -->

@@ -1,34 +1,42 @@
 
 // STATIC VARS
 var lastSelectedFruit = "";
-var fruitNames = ["Tim", "Jesús", "Raúl", "Guerman", "Jazzinto", "Rob", "Peter Daems", "Philip", "Jeroen"];
+var developerNames = ["Tim", "Jesús", "Raúl", "Guerman", "Jazzinto", "Rob", "Peter Daems", "Philip", "Jeroen"];
 
-function showRandomFruit() {
-    const fruitName = getRandomFruitWithoutRepetition();
+function showRandomDeveloper() {
 
-    document.getElementById("game01Board").innerHTML = fruitName.toUpperCase();
+    $(".game01Div").fadeOut();
+
+    setTimeout(function () {
+        const developerName = getRandomDeveloper();
+
+        document.getElementById("game01Board").innerHTML = developerName.toUpperCase();
+        $("#game01Board").show();
+        
+        $(".game01Div").fadeIn();
+
+    }, 400);
+
 }
 
 
-function getRandomFruitWithoutRepetition() {
+function getRandomDeveloper() {
     if (lastSelectedFruit != "") {
-        var indexLastFruit = fruitNames.indexOf(lastSelectedFruit);
-        fruitNames.splice(indexLastFruit, 1);
+        var indexLastFruit = developerNames.indexOf(lastSelectedFruit);
+        developerNames.splice(indexLastFruit, 1);
     }
 
-    const randomNum = getRndInteger(0, fruitNames.length);
+    const randomNum = getRndInteger(0, developerNames.length);
 
     if (lastSelectedFruit != "") {
-        fruitNames.push(lastSelectedFruit)
+        developerNames.push(lastSelectedFruit)
     }
 
-    lastSelectedFruit = fruitNames[randomNum];
+    lastSelectedFruit = developerNames[randomNum];
     
-    return fruitNames[randomNum];
+    return developerNames[randomNum];
 }
 
 function getRndInteger(min, max) {
     return Math.floor(Math.random() * (max - min)) + min;
 }
-
-showRandomFruit();

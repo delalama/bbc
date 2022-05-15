@@ -1,7 +1,13 @@
 function transformToJspSearchRegex(element, id) {
     var prevRegex = "\\/(\\w+\.jsp.*)[\\s\\S\\n].*";
 
-    var regexResult = prevRegex + element.value;
+    var jspName = element.value ;
+
+    if(jspName ==="detailUitgaandeFacturenAction"){
+        jspName = "detailUitgaandeFactuurAction";
+    }
+
+    var regexResult = prevRegex + jspName;
 
     $(element).val(regexResult);
 
